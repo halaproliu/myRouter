@@ -1,0 +1,24 @@
+{
+  "name": "myrouter",
+  "version": "1.0.0",
+  "description": "router",
+  "main": "dist/router.js",
+  "scripts": {
+    "build:browser": "rollup src/index.js --file dist/router.js --format iife",
+    "build:node": "rollup src/index.js --file dist/router.js --format cjs",
+    "build:all": "rollup src/index.js --file dist/router.js --format umd --name myBundle",
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "router"
+  ],
+  "author": "halapro.liu",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.3"
+  }
+}
